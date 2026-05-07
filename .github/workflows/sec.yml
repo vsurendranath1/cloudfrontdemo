@@ -1,0 +1,15 @@
+name: Test Secret
+
+on:
+  push:
+    branches:
+      - sec-test
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Secret
+        run: |
+          echo "${{ secrets.ENV_HH_DEV }}"
